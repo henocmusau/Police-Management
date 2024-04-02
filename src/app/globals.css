@@ -3,31 +3,60 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* CSS HSL */
+  --color-primary: hsla(240, 12%, 10%, 1);
+  --color-secondary: hsla(245, 18%, 24%, 1);
+  --color-third: hsla(212, 98%, 82%, 1);
+  --color-fourth: hsla(250, 47%, 90%, 1);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-  }
+  } */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--color-fourth));
+  background-color: var(--color-primary);
+  position: relative;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.mainLayout::before,
+.mainLayout::after {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50%;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.mainLayout::before {
+  background-image: url('../assets/imgs/blur1.svg');
+  left: 0;
+}
+
+/* .mainLayout::after {
+  background-image: url('../assets/imgs/blur2.svg');
+  right: 0;
+} */
+
+.navLink {
+  @apply text-sm bg-transparent duration-150 hover:bg-indigo-700/10 rounded-lg hover:text-third w-full py-2 px-4 flex gap-2 items-center;
+}
+
+.selected {
+  @apply text-slate-50;
 }
