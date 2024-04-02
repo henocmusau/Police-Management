@@ -12,10 +12,10 @@ export default function LeftNav() {
     const path = usePathname()
 
     return (
-        <nav className='border-r border-slate-500/20 flex flex-col basis-1/5 p-12'>
+        <nav className='border-r border-slate-500/20 flex flex-col basis-1/5 p-4 md:py-12 md:px-12 max-h-screen'>
             <header className='mb-12'>
-                <Image src={logo} alt='Logo' className='w-full h-12' />
-                <h1 className='text-xl font-semibold text-center mt-4'>PncTasker</h1>
+                <Image src={logo} alt='Logo' className='w-full h-8 md:h-12 float-left' />
+                <h1 className='text-lg hidden md:block font-semibold md:text-center mt-4'>PncTasker</h1>
             </header>
             <ul className='grow'>
                 {navLinks.map(navlink => (

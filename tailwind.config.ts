@@ -19,6 +19,9 @@ const config: Config = {
         'third': 'hsla(212, 98%, 82%, 1)',
         'fourth': 'hsla(250, 47%, 90%, 1)',
       },
+      fontSize: {
+        'xxs': '0.6rem'
+      }
     },
   },
   plugins: [],

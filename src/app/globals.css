@@ -41,7 +41,7 @@ body {
   width: 80%;
   position: absolute;
   top: 0;
-  z-index: -1;
+  z-index: -2;
 }
 
 .mainLayout::before {
@@ -52,12 +52,11 @@ body {
 .mainLayout::after {
   background-image: url('../assets/imgs/blur2.svg');
   content: '';
-  z-index: -1;
-  @apply right-0 bg-no-repeat bg-cover bg-center absolute top-0 w-[50%] h-[60%] -mr-24
+  @apply bg-no-repeat bg-cover bg-right absolute top-0 right-0 w-full md:w-[50%] md:h-[70%] -z-10
 }
 
 .navLink {
-  @apply text-sm bg-transparent duration-150 hover:bg-indigo-700/10 rounded-lg hover:text-third w-full py-2 px-4 flex gap-2 items-center;
+  @apply text-xs justify-center md:justify-normal bg-transparent duration-150 hover:bg-third/10 rounded-lg hover:text-third w-full py-2 md:px-4 flex gap-2 items-center;
 }
 
 .selected {

@@ -23,10 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <main className="mainLayout flex min-h-screen justify-between relative text-slate-400">
+        <main className="mainLayout flex min-h-[100dvh] justify-between relative overflow-x-hidden text-slate-400 text-xs">
           <LeftNav />
 
-          <section className="grow p-16">
+          <section className="grow py-8 md:pb-16 pt-0 overflow-y-auto max-h-[100dvh]">
             <TopHeader />
             {children}
           </section>

@@ -13,7 +13,7 @@ export default function Button({ type = 'primary', text, icon: Icon, additionalS
 
     return (
         <button className={style}>
-            {Icon ? <Icon /> : null}
+            {Icon ? <Icon className='h-max' /> : null}
             {text ? <span>{text}</span> : null}
         </button>
     )
