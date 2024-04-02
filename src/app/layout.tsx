@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import LeftNav from "@/components/LeftNav/LeftNav";
+import TopHeader from "@/components/TopHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -25,7 +26,10 @@ export default function RootLayout({
         <main className="mainLayout flex min-h-screen justify-between relative text-slate-400">
           <LeftNav />
 
-          {children}
+          <section className="grow p-16">
+            <TopHeader />
+            {children}
+          </section>
         </main>
       </body>
     </html>

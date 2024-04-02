@@ -20,7 +20,8 @@
 
 body {
   color: rgb(var(--color-fourth));
-  background-color: var(--color-primary);
+  background-color: rgb(0, 0, 0);
+  /* background-color: var(--color-primary); */
   position: relative;
 }
 
@@ -48,10 +49,12 @@ body {
   left: 0;
 }
 
-/* .mainLayout::after {
+.mainLayout::after {
   background-image: url('../assets/imgs/blur2.svg');
-  right: 0;
-} */
+  content: '';
+  z-index: -1;
+  @apply right-0 bg-no-repeat bg-cover bg-center absolute top-0 w-[50%] h-[60%] -mr-24
+}
 
 .navLink {
   @apply text-sm bg-transparent duration-150 hover:bg-indigo-700/10 rounded-lg hover:text-third w-full py-2 px-4 flex gap-2 items-center;
@@ -59,4 +62,20 @@ body {
 
 .selected {
   @apply text-slate-50;
+}
+
+.btn {
+  @apply py-2 rounded duration-150;
+}
+
+.btn-primary {
+  @apply bg-third text-neutral-950 hover:bg-sky-400;
+}
+
+.btn-outlined {
+  @apply bg-transparent border border-third/30 hover:text-sky-400 hover:border-sky-400;
+}
+
+.btn-icon {
+  @apply p-2;
 }
