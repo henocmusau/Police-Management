@@ -2,7 +2,7 @@ import React from 'react'
 import { IconType } from 'react-icons'
 
 interface Props {
-    type?: 'primary' | 'secondary' | 'danger' | 'warning' | 'outlined' | 'icon'
+    type?: 'primary' | 'secondary' | 'danger' | 'warning' | 'outlined' | 'icon' | 'base'
     text?: string
     icon?: IconType
     additionalStyle?: string
@@ -13,7 +13,7 @@ export default function Button({ type = 'primary', text, icon: Icon, additionalS
 
     return (
         <button className={style}>
-            {Icon ? <Icon className='h-max' /> : null}
+            {Icon ? <Icon className='h-max btnIcon' /> : null}
             {text ? <span>{text}</span> : null}
         </button>
     )
