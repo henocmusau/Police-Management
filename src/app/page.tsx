@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="grow relative px-8 md:px-16 overflow-y-hidden">
+    <section className="grow relative main-padding overflow-y-hidden">
       <ul className="flex gap-8 text-2xl mb-4">
         {['All', 'Staff', 'Positions'].map(filter => (
           <li key={filter}>
