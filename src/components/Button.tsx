@@ -9,11 +9,11 @@ interface Props {
 }
 
 export default function Button({ type = 'primary', text, icon: Icon, additionalStyle = '' }: Props) {
-    const style = type === 'icon' ? 'btn btn-icon btn-outlined' : `${additionalStyle} btn btn-${type} px-6`
+    const style = type === 'icon' ? 'btn btn-icon btn-outlined flex' : `${additionalStyle} btn btn-${type} px-6 flex`
 
     return (
         <button className={style}>
-            {Icon ? <Icon className='h-max btnIcon' /> : null}
+            {Icon ? <Icon className={`h-max btnIcon ${type !== 'icon' && type !== 'base' ? ' absolute left-1' : ''}`} /> : null}
             {text ? <span>{text}</span> : null}
         </button>
     )

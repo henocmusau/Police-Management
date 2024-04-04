@@ -16,7 +16,7 @@ export default function NavButton({ label, link, icon: Icon, isActive }: Props) 
             href={link}
             className={'navLink group '}
         >
-            <Icon className='md:pr-2 h-6 w-6 md:h-8 md:w-8 group-hover:text-indigo-500 duration-150' />
+            <Icon className='md:pr-2 h-6 w-6 md:h-8 md:w-8 group-hover:text-third duration-150' />
             <span className={isActive ? 'hidden md:block text-slate-100' : 'hidden md:block '}>{label}</span>
         </Link>
     )

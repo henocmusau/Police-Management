@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import LeftNav from "@/components/LeftNav/LeftNav";
 import TopHeader from "@/components/TopHeader";
+import PageWrapper from "@/components/PageWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -28,7 +29,9 @@ export default function RootLayout({
 
           <section className="grow py-8 md:pb-16 pt-0 overflow-y-auto h-full">
             <TopHeader />
-            {children}
+            <PageWrapper>
+              {children}
+            </PageWrapper>
           </section>
         </main>
       </body>

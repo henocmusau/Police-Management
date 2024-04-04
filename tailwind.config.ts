@@ -16,7 +16,8 @@ const config: Config = {
       colors: {
         'primary': 'hsla(240, 12%, 10%, 1)',
         'secondary': 'hsla(245, 18%, 24%, 1)',
-        'third': 'hsla(212, 98%, 82%, 1)',
+        'third': '#38bdf8',
+        // 'third': '#0ea5e9',
         'fourth': 'hsla(250, 47%, 90%, 1)',
       },
       fontSize: {

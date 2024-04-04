@@ -3,6 +3,7 @@ import { BiSearch } from 'react-icons/bi'
 import Button from './Button'
 import { PiUserGearFill } from "react-icons/pi";
 import { IoNotifications } from "react-icons/io5";
+import { FaPlus } from "react-icons/fa6";
 
 export default function TopHeader() {
     return (
@@ -18,7 +19,7 @@ export default function TopHeader() {
                     <Button icon={IoNotifications} type='icon' />
                 </li>
                 <li>
-                    <Button text='New' type='primary' />
+                    <Button text='New' type='primary' icon={FaPlus} />
                 </li>
             </ul>
         </header>
