@@ -106,3 +106,21 @@ body {
 .activeDetailBox {
   @apply translate-x-0 w-full opacity-100 min-h-[90dvh] max-h-[90dvh] md:min-h-[40%] md:max-h-[70%] backdrop-blur-lg;
 }
+
+@keyframes bounceLeft {
+
+  0%,
+  100% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounceLeft {
+  animation: bounceLeft 1s infinite;
+}
