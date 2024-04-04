@@ -4,9 +4,13 @@ import { BiSearch } from 'react-icons/bi'
 
 import StaffList from './StaffList'
 import AgentDetail from './AgentDetail'
+import useOfficersFilter from '@/hooks/useOfficersFilter'
+import { policeOfficers } from '@/utils/constants'
+
 
 export default function ContentWrapper() {
     const [isDetailOpen, setIsDetailOpen] = useState(false)
+    const { onInputChange, filteredOfficers } = useOfficersFilter(policeOfficers)
 
     const openDetail = () => {
         setIsDetailOpen(true)
@@ -26,11 +30,12 @@ export default function ContentWrapper() {
                     <input
                         placeholder='Type your search here ...'
                         type='search' name='search'
+                        onChange={onInputChange}
                         className='searchBar w-full bg-transparent placeholder:text-xs text-sm px-10 outline-none focus:ring-0'
                     />
                 </div>
                 <p className='md:hidden text-xxs px-4 italic text-third'>Click a row to view more details about the selected agent</p>
-                <StaffList openDetail={openDetail} />
+                <StaffList openDetail={openDetail} officers={filteredOfficers()} />
 
             </section>
 

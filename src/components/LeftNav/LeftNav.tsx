@@ -15,12 +15,11 @@ export default function LeftNav() {
 
     const toggleText = () => setTextVisible(p => !p)
 
-
     return (
         <nav className='border-r border-slate-500/20 duration-200 flex flex-col basis-1/5 p-4 md:py-12 md:px-12 max-h-screen'>
             <header className='mb-12 duration-300'>
                 <Image src={logo} alt='Logo' className='w-full h-8 md:h-12 float-left' />
-                <h1 className='text-lg hidden md:block font-semibold md:text-center mt-4'>PncTasker</h1>
+                <h1 className='text-lg hidden md:block font-bold md:text-center mt-4 first-letter:text-third tracking-widest'>PTasker</h1>
             </header>
             <button className='flex items-center justify-center rounded-lg duration-200 bg-third/10 mb-2' onClick={toggleText}>
                 <IoIosMenu className='md:hidden text-slate-100 h-6 w-6 text-left' />
