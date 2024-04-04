@@ -19,7 +19,7 @@ export default function TopHeader() {
                     <Button icon={IoNotifications} type='icon' />
                 </li>
                 <li>
-                    <Button text='New' type='primary' icon={FaPlus} />
+                    <Button text='New' type='primary' />
                 </li>
             </ul>
         </header>

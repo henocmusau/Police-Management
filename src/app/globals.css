@@ -60,7 +60,7 @@ body {
 }
 
 .navLink {
-  @apply text-xs justify-center md:justify-normal bg-transparent duration-150 hover:bg-third/10 rounded-lg hover:text-third w-full py-2 md:px-4 flex items-center;
+  @apply text-sm md:text-xs justify-center md:justify-normal bg-transparent duration-150 hover:bg-third/10 rounded-lg hover:text-third w-full py-2 md:px-4 flex items-center;
 }
 
 .selected {
@@ -100,9 +100,27 @@ body {
 }
 
 .detailBox {
-  @apply translate-x-[60rem] px-4 opacity-0 md:opacity-100 md:transform-none md:backdrop-blur-none duration-300 ease-in-out absolute inset-0 z-10 md:relative md:min-h-[40%] md:max-h-[70%] md:basis-[25%] lg:basis-[35%] flex flex-col items-center justify-center border-l border-slate-500/20
+  @apply translate-x-[60rem] px-4 opacity-0 md:opacity-100 md:transform-none md:backdrop-blur-none duration-300 ease-in-out absolute inset-0 z-10 md:relative md:min-h-[40%] md:max-h-[70%] md:basis-[25%] lg:basis-[35%] flex flex-col items-center pt-8 border-l border-slate-500/20
 }
 
 .activeDetailBox {
   @apply translate-x-0 w-full opacity-100 min-h-[90dvh] max-h-[90dvh] md:min-h-[40%] md:max-h-[70%] backdrop-blur-lg;
+}
+
+@keyframes bounceLeft {
+
+  0%,
+  100% {
+    transform: translateX(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+.animate-bounceLeft {
+  animation: bounceLeft 1s infinite;
 }
