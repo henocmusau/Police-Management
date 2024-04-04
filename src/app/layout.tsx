@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <main className="mainLayout flex max-h-[100dvh] h-[100dvh] justify-between relative overflow-x-hidden text-slate-400 text-xs">
+        <main className="mainLayout flex max-h-[100dvh] h-[100dvh] justify-between relative overflow-x-hidden text-slate-400 text-sm">
           <LeftNav />
 
           <section className="grow py-8 md:pb-16 pt-0 overflow-y-auto h-full">

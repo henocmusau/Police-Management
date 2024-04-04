@@ -15,7 +15,7 @@ export default function AgentDetail({ isDetailOpen: isOpen, closeDetail }: Props
     return (
         <aside className={isOpen ? 'detailBox activeDetailBox' : 'detailBox'}>
             <CgClose onClick={closeDetail} className='w-6 h-6 absolute top-4 right-4 hover:text-third md:hidden' />
-            <Image src={User} alt='User Profile Picture' className='object-cover object-center overflow-hidden min-h-10 min-w-10 h-40 w-40 rounded-full' />
+            <Image src={User} alt='User Profile Picture' className='object-cover object-center overflow-hidden min-h-40 min-w-40  h-40 w-40 rounded-full' />
 
             <table className='table-auto min-w-[50%] my-8 overflow-x-auto whitespace-nowrap'>
                 <tbody className='divide-y divide-secondary/30'>
