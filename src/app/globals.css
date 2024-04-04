@@ -60,7 +60,7 @@ body {
 }
 
 .navLink {
-  @apply text-xs justify-center md:justify-normal bg-transparent duration-150 hover:bg-third/10 rounded-lg hover:text-third w-full py-2 md:px-4 flex gap-2 items-center;
+  @apply text-xs justify-center md:justify-normal bg-transparent duration-150 hover:bg-third/10 rounded-lg hover:text-third w-full py-2 md:px-4 flex items-center;
 }
 
 .selected {
