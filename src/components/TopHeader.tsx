@@ -10,16 +10,20 @@ import { BsHousesFill } from 'react-icons/bs';
 
 export default function TopHeader() {
     const [openMainModal, setOpenMainModal] = useState(false)
+    const [searchModal, setSearchModal] = useState(false)
 
     const closeModal = () => setOpenMainModal(false)
     const openModal = () => setOpenMainModal(true)
+
+    const closeSearchModal = () => setSearchModal(false)
+    const openSearchModal = () => setSearchModal(true)
 
     return (
         <>
             <header className='flex justify-end z-10 w-full mb-8 sticky top-0 backdrop-blur-lg px-8 md:px-16 pt-4 md:pt-16 gap-8 md:gap-2'>
                 <ul className='flex gap-2 items-center order-1 justify-end md:justify-normal basis-full md:basis-auto'>
                     <li>
-                        <Button icon={BiSearch} type='base' />
+                        <Button icon={BiSearch} type='base' handleClick={openSearchModal} />
                     </li>
                     <li>
                         <Button icon={PiUserGearFill} type='icon' />
@@ -53,6 +57,19 @@ export default function TopHeader() {
                         </button>
                     </li>
                 </ul>
+            </MainModalWrapper>
+
+            <MainModalWrapper isOpen={searchModal} closeModal={closeSearchModal}>
+                <div className='grow flex items-center order-2 md:order-1 pb-4 sticky backdrop-blur-lg top-0'>
+                    <BiSearch className='absolute left-4 w-4 h-4' />
+                    <input
+                        placeholder='Type here...'
+                        type='search'
+                        name='search'
+                        className='searchBar rounded-lg border border-third outline-none w-full bg-transparent text-sm px-10 py-2 focus:ring-0'
+
+                    />
+                </div>
             </MainModalWrapper>
         </>
     )

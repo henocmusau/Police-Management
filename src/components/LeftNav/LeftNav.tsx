@@ -8,6 +8,7 @@ import { navLinks } from '@/utils/constants'
 import logo from '@/assets/imgs/logo.svg'
 import NavButton from './NavButton'
 import CurrentUser from './CurrentUser'
+import Link from 'next/link';
 
 export default function LeftNav() {
     const path = usePathname()
@@ -18,11 +19,13 @@ export default function LeftNav() {
     return (
         <nav className='border-r border-slate-500/20 duration-200 flex flex-col basis-1/5 p-4 md:py-12 md:px-12 max-h-screen'>
             <header className='mb-12 duration-300'>
-                <Image src={logo} alt='Logo' className='w-full h-8 md:h-12 float-left' />
+                <Link href='/'>
+                    <Image src={logo} alt='Logo' className='w-full h-8 md:h-12 float-left' />
+                </Link>
                 <h1 className='text-lg hidden md:block font-bold md:text-center mt-4 first-letter:text-third tracking-widest'>PTasker</h1>
             </header>
-            <button className='flex items-center justify-center rounded-lg duration-200 bg-third/10 mb-2' onClick={toggleText}>
-                <IoIosMenu className='md:hidden text-slate-100 h-6 w-6 text-left' />
+            <button className='flex items-center justify-center rounded-lg duration-300 bg-third/10 mb-2' onClick={toggleText}>
+                <IoIosMenu className='md:hidden text-slate-100 h-6 w-6 text-left duration-300' />
             </button>
             <ul className='grow duration-300'>
 
