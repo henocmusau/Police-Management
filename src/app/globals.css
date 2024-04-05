@@ -4,7 +4,7 @@
 
 :root {
   /* CSS HSL */
-  --color-primary: hsla(240, 12%, 10%, 1);
+  --color-primary: rgb(1, 1, 18);
   --color-secondary: hsla(245, 18%, 24%, 1);
   --color-third: hsla(212, 98%, 82%, 1);
   --color-fourth: hsla(250, 47%, 90%, 1);
@@ -80,7 +80,11 @@ body {
 }
 
 .btn-outlined {
-  @apply bg-transparent border border-third/30 hover:text-third hover:border-third;
+  @apply bg-transparent border text-third border-third hover:bg-third/10;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-fourth hover:bg-red-500;
 }
 
 .btn-icon {
